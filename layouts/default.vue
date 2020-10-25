@@ -44,7 +44,7 @@
       :absolute="!fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>&copy; {{ new Date().getFullYear() }} Khotanese Project | Developed by oopus</span>
     </v-footer>
   </v-app>
 </template>

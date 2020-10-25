@@ -46,8 +46,6 @@ export default {
   data () {
     return {
       search_term: "",
-      word: "a",
-      content: "b",
       search_result_items: [],
     }
   },
