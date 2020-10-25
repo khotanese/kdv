@@ -23,17 +23,13 @@
         </v-btn>
       </div><br />
           <v-list>
-            <!-- <v-list-item v-for="word_item in search_result_items" :key="word_item"> -->
             <v-list-item v-for="word_item in search_result_items" :key="word_item.id">
-              <!-- console.log({{word_item}}) -->
               <v-card style="width:600px">
               <v-card-title class="headline">{{word_item.word}}</v-card-title>
               <v-card-text><p>{{word_item.content}}</p></v-card-text>
               </v-card>
             </v-list-item>
-          </v-list>
-        
-      
+          </v-list>      
     </v-col>
   </v-row>
  </div>
