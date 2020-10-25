@@ -25,9 +25,6 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
   ],
-  router:{
-    base:"/kdv_demo/" //此为根目录，如果有具体目录需求按实际情况写
-  },
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
