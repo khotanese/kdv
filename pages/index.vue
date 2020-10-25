@@ -52,6 +52,7 @@ export default {
     call_search_api: function(){
       let query_url = "https://oopus.info/kd/index.php?term=" + this.search_term;
       let _this = this;
+      _this.search_result_items = [{word:"Searching...", content: "", id: 0}]
       axios.get(query_url)
       .then(function (response) {
         _this.search_result_items = response.data;
