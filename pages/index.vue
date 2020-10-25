@@ -2,7 +2,7 @@
  <div>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
-      <div class="text-center"v>
+      <div class="text-center">
         <v-text-field
           label="Type your word"
            v-model="search_term"
