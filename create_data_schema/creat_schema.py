@@ -23,10 +23,9 @@ with open("input.csv", "r", encoding="utf-8") as f:
             id_val += 1
             sem_id_val += 1
 
-with open("output.csv", "w", encoding="utf-8") as f:
-    output_str = ""
+with open("output.csv", "w", encoding="utf-8", newline='') as f:
+    csv_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     for row in output:
-        output_str += "\t".join(row) + "\n"
-    f.write(output_str)
+        csv_writer.writerow(row)
 
 print("Done!")
