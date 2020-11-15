@@ -14,8 +14,10 @@ with open("input.csv", "r", encoding="utf-8") as f:
         content_val = row[4]
         page_val = row[5]
         if split_token in dic_index_val:
-            for each_dic_index_val in dic_index_val.split(split_token):
-                output.append([str(id_val), str(sem_id_val), each_dic_index_val, word_val, content_val, page_val])
+            dic_index_list = dic_index_val.split(split_token)
+            word_list = word_val.split(split_token)
+            for index_val in range(len(word_list)):
+                output.append([str(id_val), str(sem_id_val), dic_index_list[index_val], word_list[index_val], content_val, page_val])
                 id_val += 1
             sem_id_val += 1
         else:
