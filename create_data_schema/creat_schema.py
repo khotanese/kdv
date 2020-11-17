@@ -5,6 +5,14 @@ output = []
 id_val = sem_id_val = 1
 split_token = ";"
 
+def clean_content_val(data):
+    data = re.sub(r"<", "&lt;", data)
+    data = re.sub(r">", "&gt;", data)
+    data = re.sub(r"【", "<i>", data)
+    data = re.sub(r"】", "</i>", data)
+    return data
+
+
 with open("input.csv", "r", encoding="utf-8") as f:
     csv_reader = csv.reader(f, delimiter=",", quotechar='"')
     # skip the title row
@@ -12,8 +20,7 @@ with open("input.csv", "r", encoding="utf-8") as f:
     for row in csv_reader:
         dic_index_val = row[2]
         word_val = row[3]
-        content_val = re.sub(r"【", "<i>", row[4])
-        content_val = re.sub(r"】", "</i>", content_val)
+        content_val = clean_content_val(row[4])
         page_val = row[5]
         if split_token in dic_index_val:
             dic_index_list = dic_index_val.split(split_token)
