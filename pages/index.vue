@@ -26,7 +26,8 @@
             <v-list-item v-for="word_item in search_result_items" :key="word_item.id">
               <v-card style="width:600px">
               <v-card-title class="headline">{{word_item.word}}</v-card-title>
-              <v-card-text><p>{{word_item.content}}</p></v-card-text>
+              <!-- <v-card-text><p v-html="word_item.content">{{word_item.content}}</p></v-card-text> -->
+              <v-card-text><p v-html="word_item.content"></p></v-card-text>
               </v-card>
             </v-list-item>
           </v-list>      
