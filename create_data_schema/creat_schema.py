@@ -10,6 +10,10 @@ def clean_content_val(data):
     data = re.sub(r">", "&gt;", data)
     data = re.sub(r"【", "<i>", data)
     data = re.sub(r"】", "</i>", data)
+    data = re.sub(r"《", "<sup>", data)
+    data = re.sub(r"》", "</sup>", data)
+    data = re.sub(r"{", "<sub>", data)
+    data = re.sub(r"}", "</sub>", data)
     return data
 
 
