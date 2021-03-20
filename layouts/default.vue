@@ -44,7 +44,7 @@
       :absolute="!fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }} Khotanese Project | Developed by oopus</span>
+      <span>&copy; {{ new Date().getFullYear() }} Khotanese Project | <a href="https://khotanese.org/khotanese-dictionary/">Content contributors</a> | Webapp was designed by oopus</span>
     </v-footer>
   </v-app>
 </template>
