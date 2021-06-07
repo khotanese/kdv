@@ -67,12 +67,6 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'Khotanese Dictionary',
           to: '/'
-        },
-        {
-          icon: 'mdi-apps',
-          title: 'About This Dictionary',
-          to: '',
-          href: 'https://khotanese.org/khotanese-dictionary/'
         }
       ],
       miniVariant: false,
