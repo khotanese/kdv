@@ -69,7 +69,7 @@ export default {
           to: '/'
         },
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-information',
           title: 'About This Dictionary',
           to: '',
           href: 'https://khotanese.org/dictionary/'
