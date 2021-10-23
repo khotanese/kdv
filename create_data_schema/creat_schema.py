@@ -44,7 +44,7 @@ def combine_dics(dic_1, dic_2, dic_3, dic_d, dic_dt, dic_n):
     if dic_n!="":
         output += f"<b>[{dic_notes}]</b> {dic_n}<br/>"
     while "</br> </br>" in output:
-        output = output.replace("</br> </br>", "</br>")   
+        output = output.replace("</br> </br>", "</br>")
     return output
 
 
