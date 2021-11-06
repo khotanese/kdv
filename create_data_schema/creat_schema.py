@@ -21,6 +21,7 @@ def clean_content_val(data):
     data = re.sub(r"{", "<sub>", data)
     data = re.sub(r"}", "</sub>", data)
     data = re.sub(r"；", ";", data)
+    data = re.sub(chr(11), "", data)
     data = re.sub(r"\|\|\|", "</br>", data)
     data = re.sub(r"\|\|\|", "</br>", data)
     # data = re.sub(r"^%([\d\.]+ ?\;?)", "<font color='red'> \g<1></font>", data)
