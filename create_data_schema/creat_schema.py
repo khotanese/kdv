@@ -10,7 +10,7 @@ dic_sgs = "SGS"
 dic_krnd = "KRND"
 dic_krnd_texts = "KRND_TEXT"
 dic_kbm_mbhp = "KBM_MBhP"
-dic_kbm_texts = "kBM_MBhP_TEXT"
+dic_kbm_texts = "KBM_MBhP_TEXT"
 dic_notes = "Notes"
 
 def clean_content_val(data):
