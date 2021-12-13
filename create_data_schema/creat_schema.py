@@ -9,6 +9,8 @@ dic_svk = "SVK"
 dic_sgs = "SGS"
 dic_krnd = "KRND"
 dic_krnd_texts = "KRND_TEXT"
+dic_kbm_mbhp = "KBM_MBhP"
+dic_kbm_texts = "kBM_MBhP_TEXT"
 dic_notes = "Notes"
 
 def clean_content_val(data):
@@ -30,7 +32,7 @@ def clean_content_val(data):
         data = data.replace("</br></br>", "</br>")    
     return data
 
-def combine_dics(dic_1, dic_2, dic_3, dic_d, dic_dt, dic_n):
+def combine_dics(dic_1, dic_2, dic_3, dic_d, dic_dt, dic_km, dic_kmt, dic_n):
     output = ""
     if dic_1!="":
         output = f"<b>[{dic_dks}]</b> {dic_1}</br>"
@@ -42,6 +44,10 @@ def combine_dics(dic_1, dic_2, dic_3, dic_d, dic_dt, dic_n):
         output += f"<b>[{dic_krnd}]</b> {dic_d}</br>"
     if dic_dt!="":
         output += f"<b>[{dic_krnd_texts}]</b></br> {dic_dt}</br>"
+    if dic_km!="":
+        output += f"<b>[{dic_kbm_mbhp}]</b></br> {dic_km}</br>"
+    if dic_kmt!="":
+        output += f"<b>[{dic_kbm_texts}]</b></br> {dic_kmt}</br>"
     if dic_n!="":
         output += f"<b>[{dic_notes}]</b> {dic_n}<br/>"
     while "</br> </br>" in output:
@@ -56,7 +62,7 @@ with open("input.csv", "r", encoding="utf-8") as f:
     for row in csv_reader:
         dic_index_val = row[2]
         word_val = row[3]
-        content_val = combine_dics(clean_content_val(row[4]), clean_content_val(row[6]), clean_content_val(row[7]), clean_content_val(row[8]), clean_content_val(row[10]), clean_content_val(row[11]))
+        content_val = combine_dics(clean_content_val(row[4]), clean_content_val(row[6]), clean_content_val(row[7]), clean_content_val(row[8]), clean_content_val(row[10]), clean_content_val(row[11]), clean_content_val(row[13]), clean_content_val(row[14]))
         page_val = row[5]
         if split_token in dic_index_val:
             dic_index_list = dic_index_val.split(split_token)
