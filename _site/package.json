@@ -15,5 +15,8 @@
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2"
+  },
+  "overrides": {
+    "serialize-javascript": "^7.0.3"
   }
 }
