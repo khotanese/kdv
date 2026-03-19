@@ -2,18 +2,23 @@
   "name": "kdv",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt dev",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "dependencies": {
-    "axios": "^0.30.3",
-    "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "vuetify": "^3.8.5",
+    "@mdi/font": "^7.4.47"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.11.2"
+    "nuxt": "^3.17.5",
+    "vite-plugin-vuetify": "^2.1.2",
+    "sass": "^1.89.1"
+  },
+  "overrides": {
+    "serialize-javascript": "^7.0.3"
   }
 }
