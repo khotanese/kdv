@@ -39,10 +39,12 @@ const search_result_items = ref([])
 async function call_search_api() {
   search_result_items.value = [{ word: 'Searching...', content_style_with_link: '', id: 0 }]
   try {
-    const data = await $fetch(`https://oopus.info/kd/index.php?term=${search_term.value}`)
-    search_result_items.value = data
+    const response = await fetch(`https://oopus.info/kd/index.php?term=${encodeURIComponent(search_term.value)}`)
+    const text = await response.text()
+    search_result_items.value = JSON.parse(text)
   } catch (error) {
     console.log(error)
+    search_result_items.value = [{ word: 'Error', content_style_with_link: 'Failed to fetch results. Please try again.', id: 0 }]
   }
 }
 </script>
